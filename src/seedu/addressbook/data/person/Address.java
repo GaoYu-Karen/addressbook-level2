@@ -1,6 +1,7 @@
 package seedu.addressbook.data.person;
 
 import seedu.addressbook.data.exception.IllegalValueException;
+import java.util.*;
 
 /**
  * Represents a Person's address in the address book.
@@ -55,4 +56,40 @@ public class Address {
     public boolean isPrivate() {
         return isPrivate;
     }
+}
+
+/**
+ * Takes in a Person's address in the address book by block, street, unit, postal code
+ */
+
+public interface Address{
+    public String userInput();
+}
+
+public class Block implements Address{
+    public String userInput(){
+        Scanner sc = new Sanner(System.in);
+        return sc.nextString();
+    } 
+}
+
+public class Street implements Address{
+    public String userInput(){
+        Scanner sc = new Sanner(System.in);
+        return sc.nextString();
+    } 
+}
+
+public class Unit implements Address{
+    public String userInput(){
+        Scanner sc = new Sanner(System.in);
+        return sc.nextString();
+    } 
+}
+
+public class PostalCode implements Address{
+    public String userInput(){
+        Scanner sc = new Sanner(System.in);
+        return sc.nextString();
+    } 
 }
